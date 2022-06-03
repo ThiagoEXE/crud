@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [UserController::class, 'index']);
 Route::get('/register', [UserController::class, 'create']);
 Route::post('/register', [UserController::class, 'store']);
+Route::get('/consult', [UserController::class, 'showAll']);
+Route::get('/consultSingle/{id}', [UserController::class, 'showSingle']);
 // Route::get('/users', [UserController::class, 'showAll']);

@@ -17,6 +17,8 @@ class RegisterService extends Controller
     }
 
     public function searchOneRegister($id){
+        $user= User::findOrFail($id);
+        return $user;
 
     }
     public function searchAllRegisters(){

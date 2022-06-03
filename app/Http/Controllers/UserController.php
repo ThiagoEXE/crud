@@ -49,7 +49,9 @@ class UserController extends Controller
      */
     public function showSingle($id)
     {
-        // get
+        $user = new RegisterService();
+        //$user ->searchOneRegister($name);
+        return view('consultSingle', ['users' => $user->searchOneRegister($id)]);
 
     }
 
@@ -58,12 +60,6 @@ class UserController extends Controller
         $userList = new RegisterService();
         return view('consult', ['users' => $userList->searchAllRegisters()]);
 
-        //return $userList;
-
-       // return User::all();
-
-
-        //return  view('consult', ['users' => User::all()]);
         //all
     }
 
