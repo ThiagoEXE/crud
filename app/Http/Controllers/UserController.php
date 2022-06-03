@@ -57,6 +57,7 @@ class UserController extends Controller
     {
         $userList = new RegisterService();
         return view('consult', ['users' => $userList->searchAllRegisters()]);
+
         //return $userList;
 
        // return User::all();
